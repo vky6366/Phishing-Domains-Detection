@@ -1,0 +1,20 @@
+package com.example.domainfishing.apicalling
+
+import com.example.domainfishing.APIURLS.ApiUrls
+import okhttp3.OkHttpClient
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
+
+object RetrofitInstance {
+    fun provideApiService()=Retrofit.Builder().baseUrl(ApiUrls.BASE_URL).client(
+        OkHttpClient.Builder().build()
+    ).addConverterFactory(GsonConverterFactory.create()).build().create()
+}
+//object
+//RetrofitInstance {
+//    fun provideapi()= Retrofit.Builder()
+//        .baseUrl(ApiUrls.BASE_URL) .client(OkHttpClient.Builder().build()).addConverterFactory(
+//            GsonConverterFactory.create()) // Optional: Add OkHttp client
+//        .build().create(ApiService::class.java)
+//}
