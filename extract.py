@@ -28,6 +28,9 @@ class Scrape():
             print(f"Error: {e}")
             return None
         
+    def get_tld(self):
+        return self.tld 
+    
     def url_length(self):
         return self._url_length
 
