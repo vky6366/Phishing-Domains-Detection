@@ -87,30 +87,20 @@ def extract_features(fetch):
 def predict_phishing():
     data = request.json.get('url') if request.is_json else request.form.get('url')
 
-    # if data == 'nobell.it/70ffb52d079109dca5664cce6f317373782/login.SkyPe.com/en/cgi-bin/verification/login/70ffb52d..' or 'http://portalsalinas.com.br/modules/mod_acepolls/spam.php' or 'http://www.teramill.com':
-    #     result = 1
-    #     return jsonify({"prediction": result})
-    
-    if not data:
-        return jsonify({"error": "Please provide a URL."}), 400
+    try:
+        fetch = Scrape(data)
+        features = extract_features(fetch)
+        print(features)
 
-    if not is_valid_url(data):
-        return jsonify({"error": "Invalid URL format."}), 400
-
-    fetch = Scrape(data)
-    features = extract_features(fetch)
-    print(features)
-
-    if features is None or features.empty:
-        result = 1 if data.startswith('http') else 0
+        scaled_input = scaler.transform(features)
+        prediction = model.predict(scaled_input)
+        result = 0 if prediction[0] == 1 else 1
         return jsonify({"prediction": result})
-
-    scaled_input = scaler.transform(features)
-
-    prediction = model.predict(scaled_input)
-    result = 0 if prediction[0] == 1 else 1
-    return jsonify({"prediction": result})
+    except Exception as e:
+        print(f"Error during scraping or prediction: {e}")
+        return jsonify({"prediction": 1}), 500
 
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0',port=5000)
+
 
