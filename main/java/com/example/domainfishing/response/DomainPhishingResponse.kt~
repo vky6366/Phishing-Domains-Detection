@@ -1,0 +1,7 @@
+package com.example.domainfishing.response
+
+data class DomainPhishingResponse(
+    val prediction: Int
+)
+
+

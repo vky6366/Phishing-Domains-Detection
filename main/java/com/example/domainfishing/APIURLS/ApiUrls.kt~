@@ -1,0 +1,6 @@
+package com.example.domainfishing.APIURLS
+
+object ApiUrls {
+    const val BASE_URL="Your API Here"
+    const val PREDICT="/predict"
+}
