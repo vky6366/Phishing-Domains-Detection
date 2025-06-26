@@ -2,12 +2,12 @@ from flask import Flask, request, jsonify
 import joblib
 import pandas as pd
 from urllib.parse import urlparse
-from extract import Scrape
+from Model.extract import Scrape
 
-with open(r"D:\Phishing Domains Detection\SGD_model.joblib", 'rb') as f:
+with open(r"D:\Projects\Phishing-Domains-Detection\Model\SGD_model.joblib", 'rb') as f:
     model = joblib.load(f)
 
-with open(r"D:\Phishing Domains Detection\scaler.pkl", 'rb') as f:
+with open(r"D:\Projects\Phishing-Domains-Detection\Model\scaler.pkl", 'rb') as f:
     scaler = joblib.load(f)
 
 app = Flask(__name__)
