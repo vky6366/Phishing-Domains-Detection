@@ -85,7 +85,7 @@ Don't let cyber threats catch you off guard.
 
 ## Data
 
-- Use your own dataset or download publicly available phishing/legitimate domain lists.
+- Dataset: https://www.kaggle.com/datasets/ndarvind/phiusiil-phishing-url-dataset
 - Typical format: CSV with at least columns like `domain` and `label` (`1` for phishing, `0` for legitimate).
 - Place your dataset in a `data/` directory or as specified in the notebooks/scripts.
 
@@ -93,6 +93,17 @@ Don't let cyber threats catch you off guard.
 
 - Follow the instructions in the main notebook(s) to preprocess data, extract features, train models, and evaluate performance.
 - You can experiment with different algorithms and feature sets by editing the notebooks.
+
+## 📈 Model Performance
+
+The model was trained using **Stochastic Gradient Descent (SGD)** with the following performance:
+
+- **Accuracy**: 99.69%
+- **Precision**: 1.00 (for both classes)
+- **Recall**: 0.99 (for class 0), 1.00 (for class 1)
+- **F1-Score**: 1.00
+
+> Dataset size: 2,35,370 samples
 
 ## Tech Stack
 
@@ -104,7 +115,7 @@ Don't let cyber threats catch you off guard.
 
 ### 🧪 Backend
 - **Flask (Python)** – Lightweight API server
-- **Machine Learning Model** – URL classification for phishing detection
+- **Stochastic Gradient Descent (SGD)** – SGD was chosen for its scalability with large datasets and its fast convergence, providing excellent results with minimal tuning.
 - **RESTful API** – Endpoint to handle URL predictions
 
 ---
