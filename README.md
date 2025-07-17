@@ -66,7 +66,7 @@ Phishing is a prevalent threat where attackers use deceptive domain names to tri
 - **Python Scripts:**  
   Some features or model training steps may be available as standalone scripts (check the repo for `.py` files). Run them as:
   ```bash
-  python script_name.py
+  python app_server.py
   ```
 
 ## Data
