@@ -1,13 +1,5 @@
-# Phishing-Domains-Detection
+# 🛡️ Phishing  Domain Detection
 
-![image 6](https://github.com/user-attachments/assets/5a5ec421-3ee8-4dda-a2ce-a4cfe7520975)
-![image 1](https://github.com/user-attachments/assets/db260269-1722-48e4-813f-7d71ad19d53d)
-![image 2](https://github.com/user-attachments/assets/9324bb59-8ca4-4031-8775-104dc47c6589)
-![image 3](https://github.com/user-attachments/assets/ad4a6ad4-938e-480c-a9a6-7d726108dcdb)
-![image 4](https://github.com/user-attachments/assets/26bf8866-7d8c-4046-98b1-c9f788a4de68)
-
-
-# Phishing Domains Detection
 
 Detect and classify phishing domains using machine learning. This repository provides tools, notebooks, and scripts for identifying malicious (phishing) domains based on features extracted from domain names and possibly other metadata. The project is intended for cybersecurity researchers, data scientists, and developers interested in automated phishing detection.
 
@@ -19,13 +11,23 @@ Detect and classify phishing domains using machine learning. This repository pro
 - [Usage](#usage)
 - [Data](#data)
 - [Model Training](#model-training)
-- [Technologies Used](#technologies-used)
+- [Technologies Used](#tech-stack)
 - [Contributing](#contributing)
 - [License](#license)
 
 ## Overview
 
-Phishing is a prevalent threat where attackers use deceptive domain names to trick users. This project leverages data analysis and machine learning to build models capable of distinguishing phishing domains from legitimate ones, using features derived from the domain name and other information.
+**Phishing URL Predictor** is a smart security app designed to help users detect malicious and phishing websites before clicking on them.  
+Don't let cyber threats catch you off guard.  
+🔍 This app uses **machine learning** to analyze URLs in real-time and determine if they're safe or potentially harmful.
+
+## 🚀 Application Implementation
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/df84f81b-b375-4e55-9af4-eb06c5f41760" />
+</div>
+
+
+
 
 ## Features
 
@@ -35,6 +37,18 @@ Phishing is a prevalent threat where attackers use deceptive domain names to tri
 - Multiple machine learning models for detection/classification
 - Model evaluation and visualization
 - Example scripts and usage documentation
+---
+  ## Application Features
+
+- 🌐 URL input and analysis interface
+- ⚙️ Backend Flask API integrated with a Machine Learning model
+- 📡 Retrofit API communication
+- 🧠 Smart ML predictions for phishing detection
+- 🔔 Instant UI feedback on URL safety
+- 📱 Built with Jetpack Compose and MVVM Architecture
+- 🛡️ Option to contact cybersecurity support when a URL is unsafe
+
+---
 
 ## Installation
 
@@ -80,10 +94,29 @@ Phishing is a prevalent threat where attackers use deceptive domain names to tri
 - Follow the instructions in the main notebook(s) to preprocess data, extract features, train models, and evaluate performance.
 - You can experiment with different algorithms and feature sets by editing the notebooks.
 
-## Technologies Used
+## Tech Stack
 
-- **Languages:** Jupyter Notebook, Python, Kotlin
-- **Libraries:** pandas, scikit-learn, numpy, matplotlib, seaborn, etc.
+### 🎨 Frontend (Android App)
+- **Kotlin**
+- **Jetpack Compose** – Modern UI toolkit
+- **MVVM Architecture** – Clean and scalable code separation
+- **Retrofit** – API communication with Flask backend
+
+### 🧪 Backend
+- **Flask (Python)** – Lightweight API server
+- **Machine Learning Model** – URL classification for phishing detection
+- **RESTful API** – Endpoint to handle URL predictions
+
+---
+
+## 📲 App Flow
+
+1. **Splash Screen**: Shows app branding.
+2. **Home Screen**: User enters a suspicious URL.
+3. **Prediction Request**: URL is sent to the Flask backend via Retrofit.
+4. **Processing**: ML model evaluates the URL.
+5. **Result**: UI shows whether the URL is safe ✅ or unsafe ❌.
+6. **Action**: If unsafe, the user can tap **Contact CyberSecurity** for help.
 
 ## Contributing
 
@@ -94,7 +127,7 @@ Contributions, issues and feature requests are welcome!
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT LICENSE](LICENSE) .
 
 ---
 
